@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build X86 docker lite OpenWrt
+name: Build docker OpenWrt
 
 on:
   repository_dispatch:
@@ -26,11 +26,11 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: X86 docker lite/feeds.conf.default
-  CONFIG_FILE: X86 docker lite/.config
-  DIY_P1_SH: X86 docker lite/diy-part1.sh
-  DIY_P2_SH: X86 docker lite/diy-part2.sh
-  WORK_DIR: X86 docker lite_openwrt
+  FEEDS_CONF: X86/feeds.conf.default
+  CONFIG_FILE: docker/.config
+  DIY_P1_SH: docker/diy-part1.sh
+  DIY_P2_SH: docker/diy-part2.sh
+  WORK_DIR: docker_openwrt
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
